@@ -1,12 +1,29 @@
 # Getting and Cleaning Data - Course Project
-This is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
 
-1. Download the dataset if it does not already exist in the working directory
-2. Load the activity and feature info
-3. Loads both the training and test datasets, keeping only those columns which reflect a mean or standard deviation
-4. Loads the activity and subject data for each dataset, and merges those columns with the dataset
-5. Merges the two datasets
-6. Converts the activity and subject columns into factors
-7. Creates a tidy dataset that consists of the average (mean) value of each variable for each subject and activity pair.
-8. The end result is shown in the file tidy.txt.
+This repository contains an R script called **'run_analysis'**, a text file called **'tidy data'**, and a **codebook**.
+
+To execute the R script successfully, first download the compressed folder containing raw data from this [link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). Then create a folder in your working directory called **'Getting&CleaningData'** to which contents of the compressed folder are to be extracted. Once these two steps are done the R script can be executed.
+
+A step-by-step explanation of the manipulations within the R script has been provided using comments. However, a supplementary overview is provided below as well:
+1. The following are done twice, once for test data and once again for train data:
+   * Read in the dataset
+   * Read in the activity labels 
+   * Read in the subject IDs 
+   * Column bind the dataset, activity labels, and subject IDs 
+2. Row bind the two datasets from step one to create a master dataset  
+3. Read in the feature names of the 561-feature vector 
+4. Rename the columns of master data as per the feature names provided 
+5. Retain only those columns in master dataset that contain either 'mean()' or 'std()' in their column name
+6. Read in the descriptive activity names 
+7. Replace activity labels of master data with descriptive activity names
+8. Use dplyr package to do the following:
+   * group the master data by descriptive activity names and subject IDs
+   * calculate mean value in each column for every unique grouping 
+9. Write the 30x6 rows of data from the above step (including column headers) into a text file
+
+The newly written file is called 'tidy data' and it can be found within this repository. 
+The codebook is a document which contains details regarding the variables found in 'tidy data'.
+
+
+
       
