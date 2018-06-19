@@ -2,7 +2,7 @@
 
 This repository contains an R script called **'run_analysis'**, a text file called **'tidy data'**, and a **codebook**.
 
-To execute the R script successfully, first download the compressed folder containing raw data from this [link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). Then extract the contents of the compressed folder to your working directory. Once these two steps are done the R script can be executed.
+To execute the R script successfully, first download the compressed folder containing raw data from this [link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). After placing the downloaded folder in the working directory, the R script can be executed.
 
 A step-by-step explanation of the manipulations within the R script has been provided using comments. However, a supplementary overview is provided below as well:
 1. The following are done twice, once for test data and once again for train data:
