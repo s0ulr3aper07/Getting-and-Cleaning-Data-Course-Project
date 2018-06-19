@@ -3,14 +3,14 @@
 ## Identifiers
 
 `Subject_ID`               
-Description : The ID of the test subject   
-Data type   : Integer 
-Values      : Ranging from 1-30
+Description : The ID of the test subject     
+Data type   : Integer   
+Values      : Ranging from 1-30  
 
 `Activity`                
-Description : The type of activity performed when the corresponding measurements were taken  
-Data type   : Character 
-Values      : WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING  
+Description : The type of activity performed when the corresponding measurements were taken    
+Data type   : Character   
+Values      : WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING    
                            
 
 ## Measurements
